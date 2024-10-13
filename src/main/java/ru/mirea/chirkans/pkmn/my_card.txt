@@ -1,0 +1,12 @@
+STAGE1
+Cloyster
+130
+WATER
+Shellder
+0 / Shell Armor / -30,60 / Aqua Split / 30
+LIGHTNING
+FIRE
+2
+Sword & Shield - Fusion Strike
+-
+Chirka / Nikita / Sergeevich / БСБО-04-23
