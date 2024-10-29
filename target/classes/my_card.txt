@@ -1,0 +1,13 @@
+STAGE1
+Cloyster
+130
+WATER
+C:\Users\123\Desktop\Pkmn\src\main\resources\evolves_from.txt
+W2/Aqua Split/60
+LIGHTNING
+FIRE
+2
+Sword & Shield - Fusion Strike
+-
+Chirka/Nikita/Sergeevich/БСБО-04-23
+51

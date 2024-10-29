@@ -1,6 +1,12 @@
-package ru.mirea.chirkans.pkmn;
+package ru.mirea.pkmn;
 
-public class Student {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Student implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     private String firstName;
     private String surName;
     private String fatherName;

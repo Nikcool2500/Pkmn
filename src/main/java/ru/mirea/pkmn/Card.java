@@ -1,9 +1,15 @@
-package ru.mirea.chirkans.pkmn;
+package ru.mirea.pkmn;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.List;
 
-public class Card {
-    private PokemonStage PokemonStage;
+
+public class Card implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    private PokemonStage pokemonStage;
     private String name;
     private int hp;
     private EnergyType pokemonType;
@@ -15,11 +21,13 @@ public class Card {
     private String gameSet;
     private char regulationMask;
     private Student pokemonOwner;
+    private String number;
+
 
     @Override
     public String toString() {
         return "Card{" +
-                "PokemonStage=" + PokemonStage +
+                "pokemonStage=" + pokemonStage +
                 ", name='" + name + '\'' +
                 ", hp=" + hp +
                 ", pokemonType=" + pokemonType +
@@ -31,6 +39,7 @@ public class Card {
                 ", gameSet='" + gameSet + '\'' +
                 ", regulationMask=" + regulationMask +
                 ", pokemonOwner=" + pokemonOwner +
+                ", number='" + number + '\'' +
                 '}';
     }
 
@@ -38,12 +47,12 @@ public class Card {
     public Card() {
     }
 
-    public Card(ru.mirea.chirkans.pkmn.PokemonStage pokemonStage, String name,
+    public Card(ru.mirea.pkmn.PokemonStage pokemonStage, String name,
                 int hp, EnergyType pokemonType, Card evolvesFrom,
                 List<AttackSkill> skills, EnergyType weaknessType,
                 EnergyType resistanceType, String retreatCost, String gameSet,
-                char regulationMask, Student pokemonOwner) {
-        PokemonStage = pokemonStage;
+                char regulationMask, Student pokemonOwner, String number) {
+        this.pokemonStage = pokemonStage;
         this.name = name;
         this.hp = hp;
         this.pokemonType = pokemonType;
@@ -55,14 +64,15 @@ public class Card {
         this.gameSet = gameSet;
         this.regulationMask = regulationMask;
         this.pokemonOwner = pokemonOwner;
+        this.number = number;
     }
 
-    public ru.mirea.chirkans.pkmn.PokemonStage getPokemonStage() {
-        return PokemonStage;
+    public ru.mirea.pkmn.PokemonStage getPokemonStage() {
+        return pokemonStage;
     }
 
-    public void setPokemonStage(ru.mirea.chirkans.pkmn.PokemonStage pokemonStage) {
-        PokemonStage = pokemonStage;
+    public void setPokemonStage(ru.mirea.pkmn.PokemonStage pokemonStage) {
+        this.pokemonStage = pokemonStage;
     }
 
     public String getName() {
@@ -152,4 +162,8 @@ public class Card {
     public void setPokemonOwner(Student pokemonOwner) {
         this.pokemonOwner = pokemonOwner;
     }
+
+    public String getNumber() { return number; }
+
+    public void setNumber(String number) { this.number = number; }
 }
