@@ -27,7 +27,7 @@ public class CardImport {
         FileInputStream streamInput = new FileInputStream(fileName);
         BufferedInputStream bufferedInput = new BufferedInputStream(streamInput);
         byte[] data = bufferedInput.readAllBytes();
-        String[] myCardData = new String(data).split("\r\n");
+        String[] myCardData = new String(data).split("\n");
         streamInput.close();
         bufferedInput.close();
 
@@ -67,12 +67,13 @@ public class CardImport {
                 EnergyType.valueOf(parsedCard[7]),
                 parsedCard[8],
                 parsedCard[9],
-                parsedCard[10].toCharArray()[0],
-                new Student(parsedCardStudent[0],
-                        parsedCardStudent[1],
-                        parsedCardStudent[2],
-                        parsedCardStudent[3]
-                        ),
+                parsedCard[10].charAt(0),
+                (parsedCardStudent.length == 1 ? null :
+                        new Student(parsedCardStudent[0],
+                            parsedCardStudent[1],
+                            parsedCardStudent[2],
+                            parsedCardStudent[3]
+                        )),
                 parsedCard[12]
                 );
 

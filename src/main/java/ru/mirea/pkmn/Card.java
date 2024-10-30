@@ -19,7 +19,7 @@ public class Card implements Serializable {
     private EnergyType resistanceType;
     private String retreatCost;
     private String gameSet;
-    private char regulationMask;
+    private char regulationMark;
     private Student pokemonOwner;
     private String number;
 
@@ -37,7 +37,7 @@ public class Card implements Serializable {
                 ", resistanceType=" + resistanceType +
                 ", retreatCost='" + retreatCost + '\'' +
                 ", gameSet='" + gameSet + '\'' +
-                ", regulationMask=" + regulationMask +
+                ", regulationMask=" + regulationMark +
                 ", pokemonOwner=" + pokemonOwner +
                 ", number='" + number + '\'' +
                 '}';
@@ -51,7 +51,7 @@ public class Card implements Serializable {
                 int hp, EnergyType pokemonType, Card evolvesFrom,
                 List<AttackSkill> skills, EnergyType weaknessType,
                 EnergyType resistanceType, String retreatCost, String gameSet,
-                char regulationMask, Student pokemonOwner, String number) {
+                char regulationMark, Student pokemonOwner, String number) {
         this.pokemonStage = pokemonStage;
         this.name = name;
         this.hp = hp;
@@ -62,7 +62,7 @@ public class Card implements Serializable {
         this.resistanceType = resistanceType;
         this.retreatCost = retreatCost;
         this.gameSet = gameSet;
-        this.regulationMask = regulationMask;
+        this.regulationMark = regulationMark;
         this.pokemonOwner = pokemonOwner;
         this.number = number;
     }
@@ -147,12 +147,12 @@ public class Card implements Serializable {
         this.gameSet = gameSet;
     }
 
-    public char getRegulationMask() {
-        return regulationMask;
+    public char getRegulationMark() {
+        return regulationMark;
     }
 
-    public void setRegulationMask(char regulationMask) {
-        this.regulationMask = regulationMask;
+    public void setRegulationMark(char regulationMark) {
+        this.regulationMark = regulationMark;
     }
 
     public Student getPokemonOwner() {
